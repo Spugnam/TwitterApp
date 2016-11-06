@@ -17,7 +17,6 @@ class loginViewController: UIViewController {
             print("I've logged in!")
             
             // Hamburger Menu
-            //        let hamburgerViewController = window!.rootViewController as! hamburgerViewController
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let hamburgerViewController = storyboard.instantiateViewController(withIdentifier: "HamburgerViewController") as! hamburgerViewController
             //window?.rootViewController = hamburgerViewController
@@ -26,7 +25,7 @@ class loginViewController: UIViewController {
             menuViewController.hamburgerViewController = hamburgerViewController
             hamburgerViewController.menuViewController = menuViewController
             
-//            self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            self.performSegue(withIdentifier: "loginSegue", sender: nil)
         }) { (error: NSError) in
             print("Login error: \(error.localizedDescription)")
         }
